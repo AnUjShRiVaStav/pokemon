@@ -86,7 +86,7 @@ const Pokeinfo = ({ data }) => {
     return (
       <>
         <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
+         Button
         </Button>
   
         <MyVerticallyCenteredModal
