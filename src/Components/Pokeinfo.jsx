@@ -1,9 +1,34 @@
 import React from "react";
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+
 
 const Pokeinfo = ({ data }) => {
-   
-    return (
-        <>
+    
+    const [modalShow, setModalShow] = React.useState(false);
+
+
+    
+    function MyVerticallyCenteredModal(props) {
+        return (
+          <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                Modal heading
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+            <>
         {
             (!data) ? "" : (
                 <>
@@ -38,6 +63,47 @@ const Pokeinfo = ({ data }) => {
         }
 
         </>
-    )
-}
-export default Pokeinfo
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+          </Modal>
+        );
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    return (
+      <>
+        <Button variant="primary" onClick={() => setModalShow(true)}>
+          Launch vertically centered modal
+        </Button>
+  
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+
+
+
+
+
+
+
+
+
+      </>
+    );
+  }
+
+  export default Pokeinfo

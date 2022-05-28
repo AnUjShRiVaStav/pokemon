@@ -12,6 +12,10 @@ const Main=()=>{
     const [prevUrl,setPrevUrl]=useState();
     const [pokeDex,setPokeDex]=useState();
 
+
+
+
+
     const pokeFun=async()=>{
         setLoading(true)
         const res=await axios.get(url);
@@ -26,6 +30,7 @@ const Main=()=>{
           setPokeData(state=>{
               state=[...state,result.data]
               state.sort((a,b)=>a.id>b.id?1:-1)
+            //   console.log(state);
               return state;
           })
        })   

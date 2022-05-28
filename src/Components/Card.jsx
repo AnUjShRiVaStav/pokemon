@@ -1,7 +1,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button'
+
 const Card = ({ pokemon, loading,infoPokemon}) => {
-   // console.log(pokemon);
+
+
+   console.log(pokemon);
     return (
         <>
         {
@@ -13,6 +17,8 @@ const Card = ({ pokemon, loading,infoPokemon}) => {
                                 <h2>{item.id}</h2>
                                 <img src={item.sprites.front_default} alt="" />
                                 <h2>{item.name}</h2>
+                             
+        
                             </div>
                         </>
                     )
