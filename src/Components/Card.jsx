@@ -13,7 +13,7 @@ const Card = ({ pokemon, loading,infoPokemon}) => {
     return (
         <>
 
-<input placeholder = 'Search by title...' type ='text'
+<input className="inputMc" placeholder = 'Search by title...' type ='text'
    onChange = {handleInput}  />
         {
             loading ? <h1>Loading...</h1> :

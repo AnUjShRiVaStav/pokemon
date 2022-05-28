@@ -37,6 +37,15 @@ body{
     justify-content: space-between;
     box-sizing: border-box;
 }
+.inputMc{
+    position: absolute;
+    border-radius: 8px;
+    z-index: 10;
+    width: 300px;
+    top: 20px;
+    height: 30px;
+
+}
 .right-content{
     width: 50%;
     text-align: center;
